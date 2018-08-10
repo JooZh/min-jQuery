@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.a {
+			color: #666;
+			font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+		}
+
+		.b {
+			color: #00e51e;
+		}
+
+		.s {
+			display: block;
+			height: 0;
+			border-top: 5px solid #9dc852;
+			border-left: 75px solid transparent;
+			border-right: 75px solid transparent;
+			border-bottom: 0 solid #dddddd;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 101;
+			transition: 0.2s 0.2s border-top ease-out, 0.3s border-top-color;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="s"></div>
+	<br>
+	<div class="id">
+		<div class="a">1</div>
+		<div class="a">2</div>
+		<div class="a">3</div>
+		<div class="a">4</div>
+		<div class="a">5
+			<input type="button" value="click">
+		</div>
+	</div>
+	<div class="id c" data-ls="ls">
+		<div class="a">1</div>
+		<div class="a">2</div>
+		<div class="a">3</div>
+		<div class="a">4</div>
+		<div class="a">5</div>
+		<div class="a">3</div>
+		<div class="a">6</div>
+		<div class="a">7</div>
+		<div class="a">8</div>
+		<input name="click" type="button" value="click">
+		<input name="text" type="text" value="">
+
+
+	</div>
+	<div id="b"></div>
+	<!-- <script src="jquery.js"></script> -->
+	<script src="slove-es6.js"></script>
+	<script>
+		// $.jsonp({
+		// 	url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+		// 	cbName:'cb',
+		// 	data:{
+		// 		wd:'黄',
+		// 		json: 1,
+		// 		p: 3,
+		// 	}
+		// }).then((data)=>{
+		// 	console.log(data);
+		// })
+		// $.fetch({
+		// 	url: 'http://wthrcdn.etouch.cn/weather_mini?citykey=101010400',
+		// 	type: 'get'
+		// }).then(res => {
+		// 	console.log(res)
+		// })
+		// $.cookie({
+		// 	method:'set',
+		// 	key:'ss',
+		// 	value:4444
+		// })
+		// let c = $.cookie({
+		// 	method:'get',
+		// 	key:'ss'
+		// })
+		$.removeStorage('ss')
+	
+		// $.axios({url:'http://wthrcdn.etouch.cn/weather_mini?citykey=101010400'}).then((data)=>{
+		// 	console.log(data);
+		// }).catch((e)=>{
+		// 	console.log('status:'+e)
+		// })
+	// console.log($('.a').removeNode())
+	</script>
+
+	<!-- <script src="jquery.js"></script> -->
+	<!-- <script src="mock.js"></script> -->
+	<!-- <script>
+		Mock.mock('http://www.test.com/nav', {
+			"data|10-20": [{
+				"id|+1": 1,
+				"name": "@cname()",
+				"friends|10-50": [{
+					"name": "@cname()",
+					"age": "@integer(20,100)"
+				}]
+			}]
+		})
+
+		$.ajax({
+			url: 'http://www.test.com/nav',
+			type: 'get',
+			data: {},
+			dataType: 'json',
+			success: function (response) {
+				console.log(response);
+			},
+			error: function () {
+
+			}
+		})
+	</script> -->
+
+	<script>
+		// 函数 多次监听 只要节点加载完成
+		// $(function(){
+
+		// })
+		// $(document).ready(function(){
+
+		// })
+
+		// // 选择器字符串
+		// $('css3选择器')
+
+		// // 节点对象
+		// var dom = document.querySelector('.id');
+		// $(dom)
+
+		// // html文本字符串
+		// let d = $(`<span class="s" id="s">
+		// 			<div id="o"><p class="s" id="s">afafaf</p></div>
+		// 			</span>
+		// 			<p>afafaf</p>
+		// 		`)
+		// $("body").append(d);
+		// // console.log(d);
+
+		// // 图片 节点，文本全部加载
+		// window.onload = function(){
+
+		// }
+		// var s = $('.a')
+		// 	.eq(1)
+		// 	.addClass('b')
+		// 	.html('asfaf')
+		// 	// .append('<p>1324234</p>')
+		// 	.removeClass('b')
+		// 	.innerHeight();	
+		// $();
+		// console.log(s)
+		// var dom = document.querySelector('.id');
+		// console.log($);
+		// console.log($());
+		// // console.log($());
+		// console.log($(dom));
+		// console.log($('.a').get(0));
+		// console.log($('.a')[0]);
+		// console.log($('.a').eq(0));
+
+		// attr， html，val,text,
+		// 	let s = $('input').eq(1);
+		// 	// let p = document.getElementsByTagName('p');
+		// 	var dom = document.querySelector('input');
+		// 	document.onclick = function(e){
+		// 		console.log(e);
+		// 	}
+		// 	// console.log(s,p);
+
+		// 	// $('[name=click]').on('click',function(){
+		// 		$('input').on('click',function(e){
+		// 			console.log(e);
+		// 		})
+		// 	// })
+		// 	let p = document.querySelectorAll('.a');
+		// 	let arr = {
+		// 		a:2,
+		// 		b:9,
+		// 		c:10
+		// 	}
+		// // console.log($(arr));
+		// 	$('.id').each(function(index,item){
+
+		// 		// $(input).val() = $('.s').html()
+		// 		// console.log(index,item);
+		// 		// item.innerHTML = 'sss'+index
+		// 	})
+
+		// var ss = $('.a');
+		// for(var i=0;i<ss.length;i++){
+		// 	console.log(i,ss[i])
+		// }
+		// console.log($('<p></p><div></div>'));
+		// console.log(Array())
+	</script>
+</body>
+
+</html>

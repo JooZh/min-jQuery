@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<div>
+		<h1>展示jQuery中on()和click()的区别</h1>
+	</div>
+	
+	<div>
+		<span>点击生成新按钮。NewOn生成的Delete按钮行为用on()实现，NewClick生成的Delete按钮行为用click()实现。</span>
+	</div>
+	<div class="test">
+		<button class="new" id="newon">NewOn</button>
+		<button class="new" id="newclick">NewClick</button>
+		<ul class="li">
+			<li>原先的HTML元素on
+				<button class="deleteon">Delete</button>
+			</li>
+			<li>原先的HTML元素click
+				<button class="deleteclick">Delete</button>
+			</li>
+		</ul>
+	</div>
+	<!-- <script src="slove-es6.js"></script> -->
+	<script src="jquery-2.1.1.min.js"></script>
+	<script>
+		$("#newclick").click(function () {
+			$(".li").append('<li>动态添加的HTML元素click<button class="deleteclick">Delete</button></li>');
+		});
+
+		$("#newon").click(function () {
+			$(".li").append('<li>动态添加的HTML元素on<button class="deleteon">Delete</button></li>');
+		});
+
+		$(".delete").click(function () {
+			$(this).parent().remove();
+		});
+
+		$(".li").on('click', ".deleteon", function () {
+			$(this).parent().remove();
+		})
+		$(".deleteclick").click(function () {
+			$(this).parent().remove();
+		});
+	</script>
+</body>
+
+</html>
